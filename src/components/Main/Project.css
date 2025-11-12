@@ -1,0 +1,70 @@
+/* Project cards layout and readable styling */
+.projects-grid{
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 20px;
+}
+
+.project-card{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 18px;
+  border-radius: 8px;
+  color: #e6eef0; /* light text on dark background */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.project-card .content{
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3{
+  color: #ffffff;
+  font-size: 1.05rem;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.project-type{
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.project-bullets{
+  margin: 8px 0 12px 1rem;
+  padding: 0;
+  color: #cfcfcf;
+}
+.project-bullets li{
+  margin-bottom: 6px;
+}
+
+.tecnologias{
+  color: #d0dce0;
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+
+.project-actions{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Keep existing button styles but ensure good sizing on small screens */
+.project-actions .custom-btn{
+  padding: 10px 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px){
+  .project-card{
+    padding: 14px;
+  }
+  .project-actions .custom-btn{
+    padding: 10px 12px;
+  }
+}
