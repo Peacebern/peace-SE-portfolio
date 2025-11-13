@@ -13,8 +13,8 @@ const projects = [
             'Curated product samples with direct purchase links'
         ],
         tools: 'React.js, JavaScript, Tailwind CSS, Git',
-        demo: '#',
-        repo: '#'
+        demo: 'https://shop-easyy.netlify.app/',
+        repo: 'https://github.com/Peacebern/-Webstack---Portfolio-Project/tree/main/front-end'
     },
     {
         id: 'bandage-ecommerce',
@@ -25,9 +25,22 @@ const projects = [
             'State management and dynamic routing for shopping flow',
             'Performance and responsive optimization'
         ],
-        tools: 'React.js, JavaScript, Tailwind CSS, Git',
-        demo: '#',
-        repo: '#'
+        tools: 'React.js, JavaScript, Tailwind CSS, Git, Redux',
+        demo: 'https://e-commerce-test-app.vercel.app/',
+        repo: 'https://github.com/Peacebern/e-commerce-test-app'
+    },
+    {
+        id: 'Reflex',
+        title: 'Reflex Web App',
+        type: 'Team Project — A team project built with Reactjs, TailwindCss and RestfulApi to document coding knowledge and showcase projects for our certification in Genesys Institute. Uses static site generation and SEO-friendly structure.',
+        bullets: [
+            'ReactJS with Dynamic site generation',
+            'Clean routing and SEO-friendly structure',
+            'Content via Markdown for easy writing'
+        ],
+        tools: 'ReactJs, TailwindCss, Markdown, RestfulApi',
+        demo: 'https://reflex-zeta.vercel.app/',
+        repo: 'https://github.com/GenesysLearnable/ES-FE-10'
     },
     {
         id: 'todo-app',
@@ -39,8 +52,21 @@ const projects = [
             'Minimal, accessible, responsive design'
         ],
         tools: 'HTML, CSS, JavaScript',
-        demo: '#',
-        repo: '#'
+        demo: 'https://to-do-list-learnable.vercel.app/',
+        repo: 'https://github.com/Peacebern/to-do-list-learnable/tree/main'
+    },
+    {
+        id: 'Space-Tourism',
+        title: 'Space Tourism Website',
+        type: 'Personal Project — A personal project built with html, css and js to document coding knowledge and showcase projects. Uses static site generation and SEO-friendly structure.',
+        bullets: [
+            'JS with static site generation',
+            'Clean routing and SEO-friendly structure',
+            'Content via Markdown for easy writing'
+        ],
+        tools: 'JavaScript, Css, Markdown, Html',
+        demo: 'https://space-tourism-lovat-xi.vercel.app/',
+        repo: 'https://github.com/Peacebern/space-tourism'
     },
     {
         id: 'dev-journal',
@@ -52,8 +78,8 @@ const projects = [
             'Content via Markdown for easy writing'
         ],
         tools: 'Next.js, React.js, Markdown, Tailwind CSS',
-        demo: '#',
-        repo: '#'
+        demo: 'https://dev-journal-blog.vercel.app/',
+        repo: 'https://github.com/Peacebern/dev_journal_blog'
     }
 ];
 

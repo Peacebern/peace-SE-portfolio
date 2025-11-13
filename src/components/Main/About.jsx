@@ -42,7 +42,7 @@ const About = () => (
                             <span>
                                 Contact:{" "}
                             </span>
-                                +234 9011912384
+                                +234 9044739674
                         </p>
                     </li>
                     <li>
