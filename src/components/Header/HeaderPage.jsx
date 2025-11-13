@@ -1,63 +1,124 @@
-import React, { useContext } from "react";
-import './Header.css';
+// import React, { useContext } from "react";
+// import './Header.css';
+
+// /* React router */
+// import { NavLink } from 'react-router-dom';
+
+// /* DarkMode */
+// import DarkMode from '../DarkMode/DarkMode';
+
+// /* Language */
+// import { FormattedMessage } from "react-intl";
+// import { langContext } from '../../context/Context';
+
+// const HeaderPage = () => {
+//     // Buttom language
+//     const idioma = useContext(langContext);
+//     // Menu desplegable
+//     const menuDesplegable = () => {
+//         let navbar = document.querySelector('.navbar');
+//         navbar.classList.toggle("activar");
+
+//         window.onscroll = () => {
+//             if (window.scrollY > 0) {
+//                 document.querySelector(".site-header").classList.add("activar")
+//             } else document.querySelector(".site-header").classList.remove("activar")
+
+//             navbar.classList.remove("activar")
+//         }
+//     }
+
+//     return (
+//         <header className="site-header">
+//             <div id="menu-btn" className="fas fa-bars" onClick={menuDesplegable}></div>
+
+//             <NavLink className="logo" to="/" >
+//                 <p>=(<span>Oluchi</span>)=></p>
+//             </NavLink>
+
+//             <nav className="navbar">
+//                 <NavLink to="/" offset={-150} duration={500}>
+//                     <FormattedMessage
+//                         id='home'
+//                         defaultMessage='Home'
+//                     />
+//                 </NavLink>
+//                 <NavLink to="/about" offset={-150} duration={500}>
+//                     <FormattedMessage
+//                         id='about'
+//                         defaultMessage='About me'
+//                     />
+//                 </NavLink>
+
+
+
+//             </nav>
+//             <div className="switch" id="switch">
+//                 <DarkMode />
+//             </div>
+//         </header>
+//     )
+// }
+
+// export default React.memo(HeaderPage);
+
+
+import React from "react";
+import "./Header.css";
 
 /* React router */
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 /* DarkMode */
-import DarkMode from '../DarkMode/DarkMode';
+import DarkMode from "../DarkMode/DarkMode";
 
-/* Language */
+/* i18n */
 import { FormattedMessage } from "react-intl";
-import { langContext } from '../../context/Context';
+// import { langContext } from "../../context/Context"; // not used
 
 const HeaderPage = () => {
-    // Buttom language
-    const idioma = useContext(langContext);
     // Menu desplegable
     const menuDesplegable = () => {
-        let navbar = document.querySelector('.navbar');
+        const navbar = document.querySelector(".navbar");
+        if (!navbar) return;
         navbar.classList.toggle("activar");
 
         window.onscroll = () => {
             if (window.scrollY > 0) {
-                document.querySelector(".site-header").classList.add("activar")
-            } else document.querySelector(".site-header").classList.remove("activar")
-
-            navbar.classList.remove("activar")
-        }
-    }
+                document.querySelector(".site-header")?.classList.add("activar");
+            } else {
+                document.querySelector(".site-header")?.classList.remove("activar");
+            }
+            navbar.classList.remove("activar");
+        };
+    };
 
     return (
         <header className="site-header">
-            <div id="menu-btn" className="fas fa-bars" onClick={menuDesplegable}></div>
+            <div id="menu-btn" className="fas fa-bars" onClick={menuDesplegable} />
 
-            <NavLink className="logo" to="/" >
-                <p>=(<span>Oluchi</span>)=></p>
+            <NavLink className="logo" to="/">
+                {/* <p>=(<span>Oluchi</span>)=></p> */}
+                <p>
+                    {'=('}<span>OLUCHI</span>{')=>'}
+                </p>
+
             </NavLink>
 
             <nav className="navbar">
-                <NavLink to="/" offset={-150} duration={500}>
-                    <FormattedMessage
-                        id='home'
-                        defaultMessage='Home'
-                    />
+                <NavLink to="/">
+                    <FormattedMessage id="home" defaultMessage="Home" />
                 </NavLink>
-                <NavLink to="/about" offset={-150} duration={500}>
-                    <FormattedMessage
-                        id='about'
-                        defaultMessage='About me'
-                    />
+                <NavLink to="/about">
+                    <FormattedMessage id="about" defaultMessage="About me" />
                 </NavLink>
-                
-                
-              
             </nav>
+
             <div className="switch" id="switch">
                 <DarkMode />
             </div>
         </header>
-    )
-}
+    );
+};
 
 export default React.memo(HeaderPage);

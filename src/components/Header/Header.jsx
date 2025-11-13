@@ -1,6 +1,87 @@
-import React, { useContext } from "react";
+// import React, { useContext } from "react";
+// import './Header.css';
+// /* ReactScroll */
+// import { Link } from 'react-scroll';
+
+// /* React router */
+// import { NavLink } from 'react-router-dom';
+
+// /* DarkMode */
+// import DarkMode from '../DarkMode/DarkMode';
+
+// /* Language */
+// import { FormattedMessage } from "react-intl";
+// import { langContext } from '../../context/Context';
+
+// const Header = () => {
+//     // Buttom language
+//     // const idioma = useContext(langContext);
+//     // Menu desplegable
+//     const menuDesplegable = () => {
+//         let navbar = document.querySelector('.navbar');
+//         navbar.classList.toggle("activar");
+
+//         window.onscroll = () => {
+//             if (window.scrollY > 0) {
+//                 document.querySelector(".site-header").classList.add("activar")
+//             } else document.querySelector(".site-header").classList.remove("activar")
+
+//             navbar.classList.remove("activar")
+//         }
+//     }
+
+//     return (
+//         <header className="site-header">
+//             <div id="menu-btn" className="fas fa-bars" onClick={menuDesplegable}></div>
+
+//             <NavLink className="logo" to="/">
+//                 <p>=(<span>OLUCHI</span>)=></p>
+//             </NavLink>
+
+//             <nav className="navbar">
+//                 <Link to="inicio" spy={true} offset={-150} href="#inicio">
+//                     <FormattedMessage
+//                         id='home'
+//                         defaultMessage='Home'
+//                     />
+//                 </Link>
+//                 <Link to="sobre-mi" spy={true} offset={-150} href="#sobre-mi">
+//                     <FormattedMessage
+//                         id='about'
+//                         defaultMessage='About me'
+//                     />
+//                 </Link>
+//                 <Link to="servicios" spy={true} offset={-150} href="#servicios">
+//                     <FormattedMessage
+//                         id='services'
+//                         defaultMessage='Services'
+//                     />
+//                 </Link>
+//                 <Link to="proyectos" spy={true} offset={-150} href="#proyectos">
+//                     <FormattedMessage
+//                         id='projects'
+//                         defaultMessage='Projects'
+//                     />
+//                 </Link>
+//                 <Link to="contactos" spy={true} offset={-150} href="#contactos">
+//                     <FormattedMessage
+//                         id='contact'
+//                         defaultMessage='Contact'
+//                     />
+//                 </Link>
+
+//             </nav>
+//             <div className="switch" id="switch">
+//                 <DarkMode />
+//             </div>
+//         </header>
+//     )
+// }
+
+// export default React.memo(Header);
+
+import React from "react";
 import './Header.css';
-/* ReactScroll */
 import { Link } from 'react-scroll';
 
 /* React router */
@@ -9,13 +90,11 @@ import { NavLink } from 'react-router-dom';
 /* DarkMode */
 import DarkMode from '../DarkMode/DarkMode';
 
-/* Language */
+/* i18n */
 import { FormattedMessage } from "react-intl";
-import { langContext } from '../../context/Context';
+// import { langContext } from '../../context/Context'; // not used
 
 const Header = () => {
-    // Buttom language
-    const idioma = useContext(langContext);
     // Menu desplegable
     const menuDesplegable = () => {
         let navbar = document.querySelector('.navbar');
@@ -23,59 +102,49 @@ const Header = () => {
 
         window.onscroll = () => {
             if (window.scrollY > 0) {
-                document.querySelector(".site-header").classList.add("activar")
-            } else document.querySelector(".site-header").classList.remove("activar")
-
-            navbar.classList.remove("activar")
-        }
-    }
+                document.querySelector(".site-header").classList.add("activar");
+            } else {
+                document.querySelector(".site-header").classList.remove("activar");
+            }
+            navbar.classList.remove("activar");
+        };
+    };
 
     return (
         <header className="site-header">
             <div id="menu-btn" className="fas fa-bars" onClick={menuDesplegable}></div>
 
             <NavLink className="logo" to="/">
-                <p>=(<span>OLUCHI</span>)=></p>
+                {/* <p>=(<span>OLUCHI</span>)=></p> */}
+                <p>
+                    {'=('}<span>OLUCHI</span>{')=>'}
+                </p>
+
             </NavLink>
 
             <nav className="navbar">
                 <Link to="inicio" spy={true} offset={-150} href="#inicio">
-                    <FormattedMessage
-                        id='home'
-                        defaultMessage='Home'
-                    />
+                    <FormattedMessage id='home' defaultMessage='Home' />
                 </Link>
                 <Link to="sobre-mi" spy={true} offset={-150} href="#sobre-mi">
-                    <FormattedMessage
-                        id='about'
-                        defaultMessage='About me'
-                    />
+                    <FormattedMessage id='about' defaultMessage='About me' />
                 </Link>
                 <Link to="servicios" spy={true} offset={-150} href="#servicios">
-                    <FormattedMessage
-                        id='services'
-                        defaultMessage='Services'
-                    />
+                    <FormattedMessage id='services' defaultMessage='Services' />
                 </Link>
                 <Link to="proyectos" spy={true} offset={-150} href="#proyectos">
-                    <FormattedMessage
-                        id='projects'
-                        defaultMessage='Projects'
-                    />
+                    <FormattedMessage id='projects' defaultMessage='Projects' />
                 </Link>
                 <Link to="contactos" spy={true} offset={-150} href="#contactos">
-                    <FormattedMessage
-                        id='contact'
-                        defaultMessage='Contact'
-                    />
+                    <FormattedMessage id='contact' defaultMessage='Contact' />
                 </Link>
-               
             </nav>
+
             <div className="switch" id="switch">
                 <DarkMode />
             </div>
         </header>
-    )
-}
+    );
+};
 
 export default React.memo(Header);
