@@ -3,19 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import './Project.css';
 
 const projects = [
-    {
-        id: 'easy-shop',
-        title: 'EASY SHOP (E-commerce website)',
-        type: 'I spearheaded the front-end development for the project "EASY SHOP", focused on creating a delightful user experience for product exploration. Curated product samples and direct links to purchase sites. Responsive design and efficient navigation.',
-        bullets: [
-            'Collaborated with cross-functional front-end and back-end engineers',
-            'Responsive design and efficient navigation',
-            'Curated product samples with direct purchase links'
-        ],
-        tools: 'React.js, JavaScript, Tailwind CSS, Git',
-        demo: 'https://shop-easyy.netlify.app/',
-        repo: 'https://github.com/Peacebern/-Webstack---Portfolio-Project/tree/main/front-end'
-    },
+
     {
         id: 'bandage-ecommerce',
         title: 'Ecommerce Website App (Bandage)',
@@ -41,6 +29,19 @@ const projects = [
         tools: 'ReactJs, TailwindCss, Markdown, RestfulApi',
         demo: 'https://reflex-zeta.vercel.app/',
         repo: 'https://github.com/GenesysLearnable/ES-FE-10'
+    },
+    {
+        id: 'easy-shop',
+        title: 'EASY SHOP (E-commerce website)',
+        type: 'I spearheaded the front-end development for the project "EASY SHOP", focused on creating a delightful user experience for product exploration. Curated product samples and direct links to purchase sites. Responsive design and efficient navigation.',
+        bullets: [
+            'Collaborated with cross-functional front-end and back-end engineers',
+            'Responsive design and efficient navigation',
+            'Curated product samples with direct purchase links'
+        ],
+        tools: 'React.js, JavaScript, Tailwind CSS, Git',
+        demo: 'https://shop-easyy.netlify.app/',
+        repo: 'https://github.com/Peacebern/-Webstack---Portfolio-Project/tree/main/front-end'
     },
     {
         id: 'todo-app',
